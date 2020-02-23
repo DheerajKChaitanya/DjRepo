@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: sampleurekaserver
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: kdheeraj
+Implementation-Vendor-Id: com.cg.eureka
+Build-Jdk: 1.8.0_201
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/sampleurekaserver
+Created-By: Maven Integration for Eclipse
+

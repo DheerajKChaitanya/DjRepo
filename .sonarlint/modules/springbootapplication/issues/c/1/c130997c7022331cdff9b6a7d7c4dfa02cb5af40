@@ -1,0 +1,14 @@
+
+jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÎÏ…“úÿÿÿÿH¹
+Y
+squid:S106";Replace this usage of System.out or System.err by a logger.(Ž½Ž¦ÿÿÿÿÿHº
+T
+squid:S106&";Replace this usage of System.out or System.err by a logger.(‚ Ü¡H»
+Y
+squid:S106(";Replace this usage of System.out or System.err by a logger.(ƒŽÝáýÿÿÿÿH¼
+T
+squid:S1066";Replace this usage of System.out or System.err by a logger.(‚ Ü¡H½
+Y
+squid:S1068";Replace this usage of System.out or System.err by a logger.(ƒŽÝáýÿÿÿÿH¾
+Tsquid:S1118":Add a private constructor to hide the implicit public one.(²¡ïõH¿
+Jsquid:S1172"+Remove this unused method parameter "args".(üÎÆýÿÿÿÿHÀ
