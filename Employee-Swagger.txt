@@ -1,0 +1,240 @@
+swagger: "2.0"
+info: 
+  version: "1.0"
+  title: EmployeeAPI
+  description: This is a sample Employee Information API
+host: employee.swagger.io
+basePath: /
+schemes: 
+- http
+consumes: 
+- application/json
+produces: 
+- application/json
+paths: 
+  /department/:
+    post:  
+      tags: 
+      - "department"
+      summary: Add department
+      operationId: department
+      parameters: 
+      - in: body
+        name: body
+        required: true
+        schema: 
+          $ref: "#/definitions/Department"
+      responses: 
+        200: 
+          description: Successful Operation
+    put:  
+      tags: 
+      - "department"
+      summary: "update department"
+      operationId: "updatedepartment"
+      parameters: 
+      - in: body
+        name: body
+        required: true
+        schema: 
+          $ref: "#/definitions/Department"
+      responses: 
+        400: 
+          description: Invalid Id Value
+        404: 
+          description: Id not found
+  /department/{Id}/:
+    get:  
+      tags: 
+      - "department"
+      summary: "getDepartmentId"
+      operationId: "getdepartmentId"
+      parameters: 
+      - name: Id
+        in: path
+        required: true
+        type: integer
+        format: int64
+      responses: 
+        200: 
+          description: Successful Operation
+          schema: 
+            type: array
+            items: 
+              $ref: "#/definitions/Department"
+        400: 
+          description: Invalid Status Value
+    delete:  
+      tags: 
+      - "department"
+      summary: "delete department"
+      operationId: "deletedepartment"
+      parameters: 
+      - name: Id
+        in: path
+        required: true
+        type: integer
+        minimum: 1.0
+        format: int64
+      responses: 
+        400: 
+          description: Invalid ID supplied
+  /personalinfo/:
+    post:  
+      tags: 
+      - "personalinfo"
+      summary: Add personalinfo
+      operationId: personalinfo
+      parameters: 
+      - in: body
+        name: body
+        required: true
+        schema: 
+          $ref: "#/definitions/Personalinfo"
+      responses: 
+        200: 
+          description: Successful Operation
+    put:  
+      tags: 
+      - "personalinfo"
+      summary: "update personalinfo"
+      operationId: "updatepersonalinfo"
+      parameters: 
+      - in: body
+        name: body
+        required: true
+        schema: 
+          $ref: "#/definitions/Personalinfo"
+      responses: 
+        400: 
+          description: Invalid Id Value
+        404: 
+          description: Id not found
+  /personalinfo/{Id}/:
+    get:  
+      tags: 
+      - "personalinfo"
+      summary: "getPersonalinfoId"
+      operationId: "getpersonalinfoId"
+      parameters: 
+      - name: Id
+        in: path
+        required: true
+        type: integer
+        format: int64
+      responses: 
+        200: 
+          description: Successful Operation
+          schema: 
+            type: array
+            items: 
+              $ref: "#/definitions/Personalinfo"
+        400: 
+          description: Invalid Status Value
+    delete:  
+      tags: 
+      - "personalinfo"
+      summary: "delete personalinfo"
+      operationId: "deletepersonalinfo"
+      parameters: 
+      - name: Id
+        in: path
+        required: true
+        type: integer
+        minimum: 1.0
+        format: int64
+      responses: 
+        400: 
+          description: Invalid ID supplied
+  /employeeinfo/:
+    post:  
+      tags: 
+      - "employeeinfo"
+      summary: Add employeeinfo
+      operationId: employeeinfo
+      parameters: 
+      - in: body
+        name: body
+        required: true
+        schema: 
+          $ref: "#/definitions/Employeeinfo"
+      responses: 
+        200: 
+          description: Successful Operation
+    put:  
+      tags: 
+      - "employeeinfo"
+      summary: "update employeeinfo"
+      operationId: "updateemployeeinfo"
+      parameters: 
+      - in: body
+        name: body
+        required: true
+        schema: 
+          $ref: "#/definitions/Employeeinfo"
+      responses: 
+        400: 
+          description: Invalid Id Value
+        404: 
+          description: Id not found
+  /employeeinfo/{Id}/:
+    get:  
+      tags: 
+      - "employeeinfo"
+      summary: "getEmployeeinfoId"
+      operationId: "getemployeeinfoId"
+      parameters: 
+      - name: Id
+        in: path
+        required: true
+        type: integer
+        format: int64
+      responses: 
+        200: 
+          description: Successful Operation
+          schema: 
+            type: array
+            items: 
+              $ref: "#/definitions/Employeeinfo"
+        400: 
+          description: Invalid Status Value
+    delete:  
+      tags: 
+      - "employeeinfo"
+      summary: "delete employeeinfo"
+      operationId: "deleteemployeeinfo"
+      parameters: 
+      - name: Id
+        in: path
+        required: true
+        type: integer
+        minimum: 1.0
+        format: int64
+      responses: 
+        400: 
+          description: Invalid ID supplied
+definitions: 
+  Department:
+     properties: 
+      departmentId:
+         type: string
+      departmentName:
+         type: string
+      salary:
+         type: string
+  Personalinfo:
+     properties: 
+      address:
+         type: string
+      city:
+         type: string
+      mobileNumber:
+         type: string
+      country:
+         type: string
+  Employeeinfo:
+     properties: 
+      firstName:
+         type: string
+      lastName:
+         type: string
